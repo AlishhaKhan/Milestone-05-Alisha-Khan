@@ -7,154 +7,112 @@
 }
 
 body {
-    background-color: #74ca74;
-    color: #090250ee;
+    background-color: #f0f4f8;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
 }
 
-/* Main Container: Flex Layout for Form and Preview */
+/* Container */
 .container {
     display: flex;
-    flex-direction: column; /* Stack the form and preview vertically */
-    justify-content: center;
-    align-items: center;
-    background: #ebecee;
+    justify-content: space-between;
+    background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    width: 90%; /* Keeps the container from being too wide */
-    max-width: 100px;
+    width: 80%;
     padding: 20px;
-    gap: 20px;
 }
 
 /* Form Section */
-#resume-form {
-    color: #2c3e50;
-    background-color: #e0f7fa;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(9, 170, 44, 0.5);
-    width: 200%;
-    max-width: 800px;
-}
-
-fieldset {
-    border: 2px solid #023e4d;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 20px;
-    background-color: #b4f5a6;
-}
-
-legend {
-    font-weight: bold;
-    text-align: center;
-    color: #103253;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-    color: #b4f5a6;
+.form-section {
+    width: 100%;
+    padding: 20px;
+    background-color: #0d47a1;
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 h1, h2 {
-    text-align: center;
-    color: #0a0b5f;
+    color: #ffd600;
     margin-bottom: 10px;
 }
 
-input, textarea {
-    width: calc(100% - 20px);
+input {
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    border: 2px solid #2c3e50;
+    border: none;
     outline: none;
 }
 
-input:focus, textarea:focus {
-    border-color: #0a89a8;
-}
-
-/* Button Styling */
-button {
-    background-color: #1e2b1e;
-    color: #ffffff;
+#generate {
+    background-color: #ffd600;
+    color: #0d47a1;
     padding: 10px;
     border: none;
     cursor: pointer;
-    width: 80%;
-    margin-top: 10px;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #092677;
-}
-
-/* Resume Output Section */
-#resumeOutput {
-    padding: 20px;
-    border: 2px solid #007bff;
-    background-color: #e0f7fa;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 200%;
-    max-width: 800px;
-    margin: 16px 0;
-}
-
-#resumeOutput h2 {
-    color: #0a0b5f;
-    text-align: center;
-}
-
-#resumeOutput img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 20px auto;
-    border: 2px solid #2c3e50;
-}
-
-/* Actions Section */
-#actions {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     width: 100%;
-    max-width: 800px;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
-#actions button {
-    background-color: #50a07b;
+#generate:hover {
+    background-color: #ffca28;
+}
+
+/* Resume Preview */
+.resume-preview {
+    width: 100%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#preview-name {
+    font-size: 2.5rem;
+    color: #0d47a1;
+}
+
+#preview-title {
+    font-size: 1.5rem;
+    color: #ffd600;
+}
+
+h3 {
+    color: #0d47a1;
+}
+
+#download-pdf {
+    background-color: #0d47a1;
     color: #ffffff;
     padding: 10px;
     border: none;
     cursor: pointer;
+    width: 50%;
+    margin-top: 20px;
     font-weight: bold;
     border-radius: 5px;
-    flex: 1;
-    margin: 5px;
 }
 
-#actions button:hover {
-    background-color: #6ceebc;
+#download-pdf:hover {
+    background-color: #1565c0;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
+/* Profile Image Styling */
+.profile-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-    #resume-form, #resumeOutput {
-        width: 100%;
-    }
+#profile-image {
+    width: 100px;
+    object-fit: cover;
+    border-radius: 60%;
+    border: 3px solid #0d47a1;
 }
